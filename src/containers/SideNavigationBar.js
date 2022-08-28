@@ -1,26 +1,33 @@
 import React from "react";
-import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
+import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import { SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
 import { MdOutlineSpaceDashboard } from 'react-icons/md';
 import { FaGithub } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
+import { NavLink } from "react-router-dom";
 
 const SideNavigationBar = () => {
     return (
         <ProSidebar style={{ height: "100vh"}}>
             <SidebarHeader>
                 <Menu iconShape="square">
-                <MenuItem icon={<MdOutlineSpaceDashboard />}>asdf</MenuItem>
-
+                    <h3 className="sidebar-header">D-Ad</h3>
                 </Menu>
             </SidebarHeader>
 
             <SidebarContent>
-                <Menu iconShape="round">
-                    <MenuItem icon={<MdOutlineSpaceDashboard />}>Dashboard</MenuItem>
-                    <MenuItem icon={<MdOutlineSpaceDashboard />}>Make Ads</MenuItem>
-                    <MenuItem icon={<MdOutlineSpaceDashboard />}>Edit Info</MenuItem>
-                </Menu>
+                <NavLink to="/" className={({ isActive }) => (isActive ? "highlight-on" : "highlight-off")}>
+                    <div className="highlight-icon"><MdOutlineSpaceDashboard style={{ width:"14px" }}/></div>
+                    <p className="highlight-text">Dashboard</p>
+                </NavLink>
+                <NavLink to="/makeads" className={({ isActive }) => (isActive ? "highlight-on" : "highlight-off")}>
+                    <div className="highlight-icon"><MdOutlineSpaceDashboard style={{ width:"14px" }}/></div>
+                    <p className="highlight-text">Make Ads</p>
+                </NavLink>
+                <NavLink to="/editinfo" className={({ isActive }) => (isActive ? "highlight-on" : "highlight-off")}>
+                    <div className="highlight-icon"><MdOutlineSpaceDashboard style={{ width:"14px" }}/></div>
+                    <p className="highlight-text">Edit Info</p>
+                </NavLink>
             </SidebarContent>
 
             <SidebarFooter style={{ textAlign: "center" }}>
