@@ -13,10 +13,12 @@ const EditInfo = () => {
     const navigate = useNavigate();
 
     function Saveinfo() {
-        // navigate('/');
+        localStorage.setItem("arr", sumcate);
+        navigate('/');
         // reactLocalStorage.clear();
         // reactLocalStorage.setObject('arr', sumcate);
         // reactLocalStorage.set('sw', 1);
+
     }
 
     function CategorySetting(value, array) {
@@ -128,4 +130,5 @@ const EditInfo = () => {
         </div>
     )
 }
+
 export default EditInfo;
