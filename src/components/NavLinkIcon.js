@@ -10,6 +10,7 @@ export const NavLinkIcon = styled.div`
     text-align: center;
     border-radius: 4px;
     text-decoration: none;
+    
     color: #ADADAD;
     justify-content: center;
     margin-right: 10px;
