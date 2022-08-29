@@ -1,3 +1,14 @@
+.pro-sidebar > .pro-sidebar-inner > .pro-sidebar-layout {
+    background-color: #2B3436;
+}
+
+.sidebar-header {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0;
+    padding: 10px 0 10px 0;
+}
+
 .sidebar-btn-wrapper {
     display: flex;
     align-items: center;
@@ -91,7 +102,7 @@
       display: inline-flex;
       width: 35px;
       height: 35px;
-      background-color: #2B2B2B;
+      background-color: #3B3C3C;
       align-items: center;
       text-align: center;
       border-radius: 4px;

@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import './styles/Contents-wrapper.scss';
-@import './styles/SidebarHeader.scss';
-@import './styles/NavComponent.scss';
+@import './styles/SideNavigationBar.scss';
+@import './styles/TopNavigationBar.scss';
+
+html {
+  background-color: #191D1F;
+}
 
 body {
   margin: 0;
@@ -10,7 +14,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 
-  background-color: #191D1E;
+  background-color: #191D1F;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
