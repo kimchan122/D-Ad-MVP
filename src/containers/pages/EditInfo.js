@@ -21,6 +21,8 @@ const EditInfo = () => {
 
     function CategorySetting(value, array) {
         // fashion, education, exercise, food, travel, medical //
+        console.log(value);
+        console.log(array);
         let cate = category;
         let sum = sumcate;
         if (value) {
@@ -38,6 +40,8 @@ const EditInfo = () => {
             sum[4] -= array[4];
             sum[5] -= array[5];
         }
+        console.log("res");
+        console.log(sum);
         setCategory(cate);
         setSumcate(sum);
     }
