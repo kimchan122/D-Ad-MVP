@@ -54,36 +54,24 @@ const MakeAds = () => {
     async function AdSubmit() {
         console.log("submit");
         let data = new Object();
-        //data.name = "unchainad";
-        //data.props = {"title": title, "script": script, "category": category, "amount": amount, ""};
         let cat = new Array([value0,value1,value2,value3,value4,value5]);
         data.title = title;
         data.script = script;
         data.category = cat;
         data.amount = amount;
-        //data.video = "";
-        //console.log(category);
         console.log("GO To IPFS");
         console.log(video);
         console.log(data);
         await VideoToIPFS(video, data);
-        // let res = await VideoToIPFS(video, data);
-        // setRes(res);
-        // console.log(res);
         if (res) {
-            //console.log(res);
-            //RegisterAds(res);
             console.log("Object Success!");
         } else {
-            //console.log(res);
             console.log("Object Failed!");
         }
     }
 
     return (
         <div className="App">
-            <h2>{process.env.REACT_APP_PINATA_API_KEY}</h2>
-            <h3>{process.env.REACT_APP_PINATA_API_SECRET}</h3>
             <Form.Group className="mb-3" controlId="Form.AdTitle" >
                 <Form.Label>Title</Form.Label>
                 <Form.Control size="md" type="text" placeholder="Advertisement Title" onChange={(e) => setTitle(e.target.value)} />
@@ -97,7 +85,6 @@ const MakeAds = () => {
                 <Form.Control
                     type="file"
                     size="sm"
-                    // value={video}
                     onChange={(e) => setVideo(e.target.files[0])}
                 />
             </Form.Group>
