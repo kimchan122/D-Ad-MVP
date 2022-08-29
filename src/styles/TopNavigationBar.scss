@@ -1,0 +1,67 @@
+// TopNavigationBar 전역 설정
+.TopNavigationBar {
+    height: 60px;
+    width: 100%;
+}
+
+.title {
+    color: whitesmoke;
+}
+
+// 
+.original_header {
+    position: relative;
+    display: flex;
+    color: black;
+    background-color: #161616;
+    font-size:40px;
+    font-weight: 400;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+// 반응형 헤더 기초, 추가 예정
+// .change_header {
+//     max-width: inherit;
+//     width: 100%;
+//     position: fixed;
+//     color: black;
+//     background-color: #ff000033;
+//     font-size:40px;
+//     font-weight: 400;
+//     height: 60px;
+//     border: #000000 3px;
+//     border-radius: 20px;
+//     transition: 0.3s;
+//     backdrop-filter: blur(10px);
+// }
+
+.login-complete {
+    height: 32px;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 6px #00000040;
+    color: #aaa;
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    padding: 8px 16px 8px 12px;
+    font-size: 14px;
+    line-height: 60px;
+    background-color: #22292A;
+}
+
+.login-notyet {
+    height: 32px;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 6px #00000040;
+    color: #aaa;
+    display: flex;
+    flex-direction: row;
+    margin-left: 16px;
+    padding: 8px 16px 8px 12px;
+    font-size: 14px;
+}
