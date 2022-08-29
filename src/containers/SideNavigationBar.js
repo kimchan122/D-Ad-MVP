@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const SideNavigationBar = () => {
     return (
-        <ProSidebar style={{ height: "100vh"}}>
+        <ProSidebar style={{ height: "100vh", position: "fixed"}}>
             <SidebarHeader>
                 <Menu iconShape="square">
                     <h3 className="sidebar-header">D-Ad</h3>

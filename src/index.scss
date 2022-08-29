@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import './styles/Contents-wrapper.scss';
 @import './styles/SidebarHeader.scss';
 @import './styles/NavComponent.scss';
 
@@ -18,6 +19,14 @@ body {
   -ms-use-select: none;
   user-select: none;
   -ms-overflow-style: none;
+  
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 code {

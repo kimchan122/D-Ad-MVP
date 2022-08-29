@@ -14,9 +14,9 @@ import 'react-pro-sidebar/dist/css/styles.css';
 function App() {
   return (
     <HashRouter classname="App" >
-      <div>
+      <SideNavigationBar />
+      <div className="Contents-wrapper">
         <TopNavigationBar />
-        <SideNavigationBar />
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/makeads" element={<MakeAds />} />
