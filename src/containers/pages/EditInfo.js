@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import { MDBBtnGroup, MDBCheckbox, MDBRadio } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
-import { reactLocalStorage } from 'reactjs-localstorage';
+// import { reactLocalStorage } from 'reactjs-localstorage';
 
 const EditInfo = () => {
 
@@ -13,10 +13,10 @@ const EditInfo = () => {
     const navigate = useNavigate();
 
     function Saveinfo() {
-        navigate('/');
-        reactLocalStorage.clear();
-        reactLocalStorage.setObject('arr', sumcate);
-        reactLocalStorage.set('sw', 1);
+        // navigate('/');
+        // reactLocalStorage.clear();
+        // reactLocalStorage.setObject('arr', sumcate);
+        // reactLocalStorage.set('sw', 1);
     }
 
     function CategorySetting(value, array) {
