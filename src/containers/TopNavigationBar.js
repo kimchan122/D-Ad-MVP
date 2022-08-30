@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import injected from '../functions/Connector';
+import injected from '../functions/connector';
 import { FaWallet } from "react-icons/fa";
 import { useWeb3React } from "@web3-react/core";
 
