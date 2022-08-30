@@ -20,7 +20,6 @@ const TopNavigationBar = () => {
     const connectWallet = async () => {
         try {
           await activate(injected, (error) => {
-            // 크롬 익스텐션 없을 경우 오류 핸들링
             console.log(error);
             if ("/No Ethereum provider was found on window.ethereum/")
               throw new Error("Metamask 익스텐션을 설치해주세요");
