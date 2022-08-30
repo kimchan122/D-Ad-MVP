@@ -35,7 +35,7 @@ const TopNavigationBar = () => {
         <div className="TopNavigationBar">
             <div className={scrollPosition < 100 ? "original_header" : "change_header"}>
             {/* <div className="original_header"> */}
-                <span className="title">PageTitle</span>
+                <span className="pagetitle">PageTitle</span>
                 <div>
                     {active ? (
                         <div className="login-complete" /*onClick={handleOpenMenu}*/ style={{ backgroungcolor: "#fff", marginRight: "0px" }}>

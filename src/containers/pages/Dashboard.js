@@ -3,7 +3,8 @@ import { Button, Card, Col, Container, Modal, Row } from "react-bootstrap";
 import contract from '../../contracts/RegisterAds.json';
 import { ethers } from "ethers";
 import { useWeb3React } from "@web3-react/core";
-import ModalElement from "../../components/ModalElement";
+import ModalElement from "../../components/AdModal";
+import AdModal from "../../components/AdModal";
 
 const snarkjs = require('snarkjs');
 
@@ -73,7 +74,7 @@ const Dashboard = () => {
     });
 
     // calculateProof(arrfromedit, "contractaddresss");
-    async function calculateProof() { 
+    async function calculateProof() {
 
         let wasmBuff = `https://gateway.pinata.cloud/ipfs/QmYAjZGHpeg1PT8rDXNHbN4kVW5V3rid346PHENW424ftR`;
         let zkeyBuff = `https://gateway.pinata.cloud/ipfs/QmUoB5pgRY9NYJRQT3AGbcZKKSiTm3yPbzkasmHS6QvykX`;
@@ -93,13 +94,11 @@ const Dashboard = () => {
             "valueMedical": [4],
             "valueEducation": [4],
             "valueExercise": [6]
-          }
+        }
 
-        //   console.log(w);
-        //   console.log(x);
-          console.log(input);
-          console.log(wasmBuff);
-          console.log(zkeyBuff);
+        console.log(input);
+        console.log(wasmBuff);
+        console.log(zkeyBuff);
 
         // console.log(snarkjs.groth16.fullProve());
 
@@ -112,26 +111,26 @@ const Dashboard = () => {
         console.log(proof);
         setProof(proof);
     }
-      
+
     async function callAds() {
-      const { ethereum } = window;
-      let provider = new ethers.providers.Web3Provider(ethereum);
-      const signer = provider.getSigner();
-      let contract = new ethers.Contract(contractAddress, abi, signer);
-    
-      console.log(proof);
-      let a = proof[0];
-      let b = proof[1];
-      let c = proof[2];
-      let pubInput = proof[3];
-    
-      try {
-        // 잠시 주석처리함
-        // let tx = await contract.callTargetAds(a, b, c, pubInput, adId);
-        // await tx.wait()
-      } catch (error) {
-        alert("fail : " + error)
-      }
+        const { ethereum } = window;
+        let provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        let contract = new ethers.Contract(contractAddress, abi, signer);
+
+        console.log(proof);
+        let a = proof[0];
+        let b = proof[1];
+        let c = proof[2];
+        let pubInput = proof[3];
+
+        try {
+            // 잠시 주석처리함
+            // let tx = await contract.callTargetAds(a, b, c, pubInput, adId);
+            // await tx.wait()
+        } catch (error) {
+            alert("fail : " + error)
+        }
     }
 
     const Ads = async () => {
@@ -142,7 +141,7 @@ const Dashboard = () => {
             const provider = new ethers.providers.Web3Provider(ethereum);
             const signer = provider.getSigner();
             const contract = new ethers.Contract(contractAddress, abi, signer);
-    
+
             let fashion = await contract.showAdFashion(0);
             let food = await contract.getFood(0);
             let travel = await contract.getTravel(0);
@@ -167,63 +166,67 @@ const Dashboard = () => {
 
 
     return (
-        <Container>
-            {/* <Row><Button onClick={(e) => Ads()}>Button</Button></Row> */}
-            <Row xxs={1} xs={1} sm={1} md={2} lg={3} xl={3} xxl={4} xxxl={4} >
-                {account ? (/*localstorage empty or not! --> true는 임시*/true!=undefined ? (results != null ? results.rows.map((d, i) => {
-                    return (
-                        <Col key={i}>
-                            {/* <div key={i}>{d.metadata.keyvalues.video}</div> */}
-                            <Card onClick={() => setModaldata(d)} style={{ backgroundColor: "#22292A" }} className="mb-3">
+        <div className="Common-wrapper">
 
-                                <video style={{ width: "100%", height: "200px" }}>
-                                    <source
-                                        src={`${d.metadata.keyvalues.video}`}
-                                        type="video/mp4"
-                                    />
-                                    <track default kind="captions" srcLang="en" src="/media/examples/friday.vtt" />
-                                </video>
-                                <Card.Body>
-                                    <Card.Title
-                                        style={{
-                                            display: "-webkit-box",
-                                            textOverflow: "ellipsis",
-                                            overflow: "auto",
-                                            WebkitLineClamp: "2",
-                                            WebkitBoxOrient: "vertical",
-                                        }}
-                                    >
-                                        {d.metadata.keyvalues.title}
-                                    </Card.Title>
-                                    <Card.Text style={{ fontsize: "5px" }}>{d.metadata.keyvalues.script}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <Modal
-                                size="lg"
-                                show={lgShow}
-                                onHide={() => setLgShow(false)}
-                                aria-labelledby="example-modal-sizes-title-lg"
-                                style={{ backgroundColor: "#22292A" }}
-                            >
-                                <ModalElement data={mddata} style={{ backgroundColor: "#22292A" }} />
-                            </Modal>
-                        </Col>
-                    )
-                })
-                    : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
-                        <span>Result loading error! Please refresh the screen!</span>
-                    </Card>)
-                    : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
-                        {/* {reactLocalStorage.clear()} */}
-                        <span>Please enter simple information through the EditInfo menu on the left side of our website!</span>
-                    </Card>)
-                    : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
-                        {/* {reactLocalStorage.clear()} */}
-                        <span>Please connect to MetaMask via the top right button on our website!</span>
-                    </Card>
-                }
-            </Row>
-        </Container>
+            <Container>
+                <Row><Button onClick={(e) => Ads()}>Button</Button></Row>
+                <Row xxs={1} xs={1} sm={1} md={2} lg={3} xl={3} xxl={4} xxxl={4} >
+                    {account ? (/*localstorage empty or not! --> true는 임시*/true != undefined ? (results != null ? results.rows.map((d, i) => {
+                        return (
+                            <Col key={i}>
+                                {/* <div key={i}>{d.metadata.keyvalues.video}</div> */}
+                                <Card onClick={() => setModaldata(d)} style={{ backgroundColor: "#22292A" }} className="mb-3">
+
+                                    <video style={{ width: "100%", height: "200px" }}>
+                                        <source
+                                            src={`${d.metadata.keyvalues.video}`}
+                                            type="video/mp4"
+                                        />
+                                        <track default kind="captions" srcLang="en" src="/media/examples/friday.vtt" />
+                                    </video>
+                                    <Card.Body>
+                                        <Card.Title
+                                            style={{
+                                                display: "-webkit-box",
+                                                textOverflow: "ellipsis",
+                                                overflow: "auto",
+                                                WebkitLineClamp: "2",
+                                                WebkitBoxOrient: "vertical",
+                                            }}
+                                        >
+                                            {d.metadata.keyvalues.title}
+                                        </Card.Title>
+                                        <Card.Text style={{ fontsize: "5px" }}>{d.metadata.keyvalues.script}</Card.Text>
+                                    </Card.Body>
+                                </Card>
+
+                            </Col>
+                        )
+                    })
+                        : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
+                            <span>Wait a seconds...</span>
+                        </Card>)
+                        : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
+                            {/* {reactLocalStorage.clear()} */}
+                            <span>Please enter simple information through the EditInfo menu on the left side of our website!</span>
+                        </Card>)
+                        : <Card style={{ position: "absolute", left: "50%", top: "50%", transform: "translateX(-50%)", backgroundColor: "#22292A", fontSize: "15px", textAlign: "center", padding: "10px", paddingLeft: "30px", paddingRight: "30px" }}>
+                            {/* {reactLocalStorage.clear()} */}
+                            <span>Please connect to MetaMask via the top right button on our website!</span>
+                        </Card>
+                    }
+                </Row>
+            </Container>
+            <Modal
+                size="lg"
+                show={lgShow}
+                onHide={() => setLgShow(false)}
+                aria-labelledby="example-modal-sizes-title-lg"
+                style={{ backgroundColor: "#22292A" }}
+            >
+                <AdModal data={mddata}/>
+            </Modal>
+        </div>
     )
 }
 export default Dashboard;
