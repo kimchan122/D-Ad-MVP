@@ -71,7 +71,7 @@ const MakeAds = () => {
     }
 
     return (
-        <div className="App">
+        <div className="Common-wrapper">
             <Form.Group className="mb-3" controlId="Form.AdTitle" >
                 <Form.Label>Title</Form.Label>
                 <Form.Control size="md" type="text" placeholder="Advertisement Title" onChange={(e) => setTitle(e.target.value)} />

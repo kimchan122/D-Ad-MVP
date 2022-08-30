@@ -3,28 +3,15 @@ import { Button, Modal } from "react-bootstrap";
 import contract from '../contracts/Ads.json';
 import { ethers } from "ethers";
 import { useWeb3React } from "@web3-react/core";
-import injected from "../functions/connector";
+import injected from "../functions/Connector";
+
 const contractAddress = "0xB46Da19840033fdaE1635f9EDe38E0a7ed8241E9";
 const abi = contract.abi;
+
 const ModalElement = ({ data }) => {
 
-    const { account, active, activate } = useWeb3React();
-
-    const connectWallet = async () => {
-      try {
-        await activate(injected, (error) => {
-          // 크롬 익스텐션 없을 경우 오류 핸들링
-          console.log(error);
-          if ("/No Ethereum provider was found on window.ethereum/")
-            throw new Error("Metamask 익스텐션을 설치해주세요");
-        });
-      } catch (err) {
-        alert(err);
-        window.open("https://metamask.io/download.html");
-      }
-    };
+    const { account, activate } = useWeb3React();
     console.log(account);
-
 
     const [videoended, setVideoended] = useState(false);
 

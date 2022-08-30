@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import { useWeb3React } from "@web3-react/core";
-import injected from "./connector";
+import injected from "./Connector";
 
 function MetamaskProvider({ children }) {
   const { active: networkActive, error: networkError, activate: activateNetwork } = useWeb3React();

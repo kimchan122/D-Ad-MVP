@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@import './styles/Common-style.scss';
 @import './styles/Contents-wrapper.scss';
 @import './styles/SideNavigationBar.scss';
 @import './styles/TopNavigationBar.scss';
-@import './styles/Common-style.scss';
 
 html {
   background-color: #191D1F;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
-  margin: 0;
+  margin: 0px;
+  padding: 0;
+
+  touch-action: none;
+  overflow-x: hidden;
+  position: relative;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -22,12 +30,9 @@ body {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-use-select: none;
-  user-select: none;
-  -ms-overflow-style: none;
-  
+  user-select: none;  
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-
 }
 
 body::-webkit-scrollbar {

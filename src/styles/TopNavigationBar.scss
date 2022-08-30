@@ -3,12 +3,11 @@
     height: 100%;
     width: 100%;
     background-color: #161616;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 40px;
 }
 
 .title {
+    padding-left: 30px;
     color: whitesmoke;
 }
 
@@ -27,20 +26,23 @@
 }
 
 // 반응형 헤더 기초, 추가 예정
-// .change_header {
-//     max-width: inherit;
-//     width: 100%;
-//     position: fixed;
-//     color: black;
-//     background-color: #ff000033;
-//     font-size:40px;
-//     font-weight: 400;
-//     height: 60px;
-//     border: #000000 3px;
-//     border-radius: 20px;
-//     transition: 0.3s;
-//     backdrop-filter: blur(10px);
-// }
+.change_header {
+    display: flex;
+    position: fixed;
+    width: calc(100% - 200px);
+    color: black;
+    background-color: #161616BB;
+    font-size:40px;
+    font-weight: 400;
+    height: 60px;
+    border: #000000 3px;
+    border-radius: 20px;
+    transition: 0.3s;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    backdrop-filter: blur(10px);
+}
 
 .login-complete {
     height: 32px;
