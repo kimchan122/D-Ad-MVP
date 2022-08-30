@@ -1,0 +1,29 @@
+.form-control:not(active) {
+    background-color: #333333 !important;
+    border-color: #13191C !important;
+    color: #dddddd !important;
+}
+
+.form-control:focus{
+    border-color: #dddddd !important;
+    box-shadow: 0 0 0 0.1rem #13191C !important;
+    background-color: #595856 !important;
+    color: white;
+}
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AAAAAA !important;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+.range-slider {
+    width: 100%;
+}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import injected from '../functions/connector';
+import injected from '../functions/Connector';
 import { FaWallet } from "react-icons/fa";
 import { useWeb3React } from "@web3-react/core";
 
@@ -33,9 +33,9 @@ const TopNavigationBar = () => {
 
     return (
         <div className="TopNavigationBar">
-            {/* <div className={scrollPosition < 50 ? "original_header" : "change_header"}> */}
-            <div className="original_header">
-                <span className="title">PageTitle</span>
+            <div className={scrollPosition < 100 ? "original_header" : "change_header"}>
+            {/* <div className="original_header"> */}
+                <span className="pagetitle">PageTitle</span>
                 <div>
                     {active ? (
                         <div className="login-complete" /*onClick={handleOpenMenu}*/ style={{ backgroungcolor: "#fff", marginRight: "0px" }}>

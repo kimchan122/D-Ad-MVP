@@ -1,14 +1,14 @@
 import React from "react";
 import { ProSidebar, Menu } from 'react-pro-sidebar';
 import { SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
-import { MdOutlineSpaceDashboard } from 'react-icons/md';
-import { FaGithub } from 'react-icons/fa';
+import { MdOutlineSpaceDashboard, MdModeEditOutline, MdAddToPhotos } from 'react-icons/md';
+import { FaGithub, FaEdit } from 'react-icons/fa';
 import { TbWorld } from 'react-icons/tb';
 import { NavLink } from "react-router-dom";
 
 const SideNavigationBar = () => {
     return (
-        <ProSidebar style={{ height: "100vh", minWidth: "200px", width: "200px", position: "fixed", backgroundColor: "#2C3335"}}>
+        <ProSidebar style={{ height: "100%", minWidth: "200px", width: "200px", position: "fixed", backgroundColor: "#2C3335"}}>
             <SidebarHeader>
                 <Menu iconShape="square">
                     <h3 className="sidebar-header">D-Ad</h3>
@@ -21,11 +21,11 @@ const SideNavigationBar = () => {
                     <p className="highlight-text">Dashboard</p>
                 </NavLink>
                 <NavLink to="/makeads" className={({ isActive }) => (isActive ? "highlight-on" : "highlight-off")}>
-                    <div className="highlight-icon"><MdOutlineSpaceDashboard style={{ width:"14px" }}/></div>
+                    <div className="highlight-icon"><MdAddToPhotos style={{ width:"14px" }}/></div>
                     <p className="highlight-text">Make Ads</p>
                 </NavLink>
                 <NavLink to="/editinfo" className={({ isActive }) => (isActive ? "highlight-on" : "highlight-off")}>
-                    <div className="highlight-icon"><MdOutlineSpaceDashboard style={{ width:"14px" }}/></div>
+                    <div className="highlight-icon"><MdModeEditOutline style={{ width:"14px" }}/></div>
                     <p className="highlight-text">Edit Info</p>
                 </NavLink>
             </SidebarContent>
