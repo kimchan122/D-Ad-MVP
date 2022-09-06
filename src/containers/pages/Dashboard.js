@@ -96,7 +96,7 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        if (loading) {
+        if ((loading && results==null) || realresults) {
             AdvertisementComponents();
         }
     }, [results]);

@@ -51,7 +51,7 @@ const AdModal = ({ data, normaltype }) => {
           {data.metadata.keyvalues.title}
         </Modal.Title>
       </Modal.Header>
-      <video style={{ width: "100%" }} autoPlay onEnded={(e) => VideoEnd(e)} >
+      <video style={{ width: "100%" }} autoPlay onEnded={(e) => VideoEnd(e)} crossorigin="anonymous">
         <source
           src={`${data.metadata.keyvalues.video}`}
           type="video/mp4"
