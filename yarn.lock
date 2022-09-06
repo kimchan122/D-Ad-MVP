@@ -5504,13 +5504,6 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-circom_runtime@0.1.19:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/circom_runtime/-/circom_runtime-0.1.19.tgz#6962494f1be0fc4884a4b01a109e0a9b2a599ff3"
-  integrity sha512-h+NNhLionGPbkjmkE7OAOg6lGZsb9OEVwmoRc4LyjI9lf/mlHNX2CASZnbr1L+TBVYV9PJNTNsWpLX/BRLioZA==
-  dependencies:
-    ffjavascript "0.2.55"
-
 "circom_runtime@git+https://github.com/kimchan122/circom_runtime.git":
   version "0.1.20"
   resolved "git+https://github.com/kimchan122/circom_runtime.git#1abf726f8e3f92095872996a663a06dd6d71aae3"
@@ -15260,15 +15253,14 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-snarkjs@^0.4.25:
+"snarkjs@git+https://github.com/kimchan122/snarkjs.git":
   version "0.4.26"
-  resolved "https://registry.yarnpkg.com/snarkjs/-/snarkjs-0.4.26.tgz#e2844e21d9b64a86c4d196500d3da243c1a1dac8"
-  integrity sha512-cyhRV4GrsH0xCkRZfAPzNUN1B89IVQ8mvaD4J1ZiKGFzRCSsaSf+/cSM1rnoJPO/fxFVGFsgZY9Z4MD5Pxqiyw==
+  resolved "git+https://github.com/kimchan122/snarkjs.git#a3fbe4d1907678004f0689e684e78d10ac7b5649"
   dependencies:
     "@iden3/binfileutils" "0.0.11"
     bfj "^7.0.2"
     blake2b-wasm "^2.4.0"
-    circom_runtime "0.1.19"
+    circom_runtime "git+https://github.com/kimchan122/circom_runtime.git"
     ejs "^3.1.6"
     fastfile "0.0.20"
     ffjavascript "0.2.55"

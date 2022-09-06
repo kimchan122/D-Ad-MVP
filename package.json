@@ -39,7 +39,7 @@
     "readline": "^1.3.0",
     "rimble-ui": "^0.14.0",
     "sass": "^1.54.8",
-    "snarkjs": "^0.4.25",
+    "snarkjs": "git+https://github.com/kimchan122/snarkjs.git",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.0",
     "web3-react": "^5.0.5"
