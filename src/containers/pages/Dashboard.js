@@ -32,6 +32,7 @@ let ArrfromEdit_temp = null;
 let ArrfromEdit_temp2 = null;
 
 const Dashboard = () => {
+    console.log(localStorage);
     if (localStorage != null && localStorage.length>0) {
         // console.log(localStorage);
         ArrfromEdit_temp = localStorage.getItem("arr");
@@ -96,8 +97,9 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        if ((loading && results==null) || realresults==null) {
+        if (loading) {
             AdvertisementComponents();
+            setLoading(false);
         }
     }, [results]);
 
