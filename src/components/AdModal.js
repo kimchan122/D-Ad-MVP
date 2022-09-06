@@ -9,10 +9,10 @@ import Tooltip from 'react-bootstrap/Tooltip';
 const contractAddress = "0xB46Da19840033fdaE1635f9EDe38E0a7ed8241E9";
 const abi = contract.abi;
 
-const AdModal = ({ data }) => {
+const AdModal = ({ data, normaltype }) => {
 
+  console.log(normaltype);
   const { account, activate } = useWeb3React();
-  console.log(account);
 
   const [videoended, setVideoended] = useState(false);
 
@@ -47,7 +47,7 @@ const AdModal = ({ data }) => {
   return (
     <>
       <Modal.Header closeButton style={{ backgroundColor: "#2B3437", color: "#ffffff" }}>
-        <Modal.Title id="example-modal-sizes-title-lg">
+        <Modal.Title id="example-modal-sizes-title-lg" style={{whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis"}}>
           {data.metadata.keyvalues.title}
         </Modal.Title>
       </Modal.Header>
@@ -63,19 +63,27 @@ const AdModal = ({ data }) => {
           Script
         </Modal.Title>
         <p style={{ color: "$ffffff" }}>{data.metadata.keyvalues.script}</p>
-      </Modal.Body>
-      <Modal.Body style={{ backgroundColor: "#2B3437" }}>
-        {videoended
-          ? <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Let's get rewarded!</Tooltip>}>
+        
+        { videoended ?
+          (normaltype == "true" ?
+            <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Let's get reward!</Tooltip>}>
+              <span className="d-inline-block">
+                <Button variant="primary" size="sm" disabled={false} onClick={mintERC20Handler} style={{ backgroundColor: "#E6007A", borderColor: "#E6007A" }}>
+                  Verify
+                </Button>
+              </span>
+            </OverlayTrigger>
+            : <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">You need to sign in...</Tooltip>}>
+              <span className="d-inline-block">
+                <Button variant="primary" size="sm" disabled={true} style={{ backgroundColor: "#E6007A", borderColor: "#E6007A" }}>
+                  Wait...
+                </Button>
+              </span>
+            </OverlayTrigger>
+          ) :
+          <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Please wait for the D-Ad to end!</Tooltip>}>
             <span className="d-inline-block">
-              <Button variant="primary" size="sm" disabled={false} onClick={mintERC20Handler} style={{ backgroundColor: "#E6007A", borderColor: "#E6007A" }}>
-                Verify
-              </Button>
-            </span>
-          </OverlayTrigger>
-          : <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Please wait for the ad to end!</Tooltip>}>
-            <span className="d-inline-block">
-              <Button variant="primary" size="sm" disabled={true} style={{ backgroundColor: "#E6007A", borderColor: "#E6007A" }}>
+              <Button variant="primary" size="sm" disabled style={{ backgroundColor: "#E6007A", borderColor: "#E6007A" }}>
                 Wait...
               </Button>
             </span>

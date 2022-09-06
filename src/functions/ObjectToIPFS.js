@@ -5,16 +5,11 @@ const ObjectToIPFS = async (video, obj) => {
         try {
             const pinataSDK = require('@pinata/sdk');
             const pinata = pinataSDK(`${process.env.REACT_APP_PINATA_API_KEY}`, `${process.env.REACT_APP_PINATA_API_SECRET}`);
-            // pinata.testAuthentication().then((result) => {
-            //     console.log(result);
-            // }).catch((err) => {
-            //     console.log(err);
-            // });
 
             const MyCustomName = "unchainads";
 
-            console.log(video)
-            console.log(obj);
+            // console.log(video)
+            // console.log(obj);
 
             const body = {
                 message: `${obj.title}`,

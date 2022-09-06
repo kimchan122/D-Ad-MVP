@@ -1,0 +1,51 @@
+.MbTopNavigationBarContainer {
+    background-color: black;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    top:0px;
+    height: 50px;
+    vertical-align: middle;
+    align-items: center;
+    z-index: 100;
+}
+
+.MbTitle {
+    line-height: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #888888;
+    vertical-align: middle;
+    display: inline-block;
+    word-break : nowrap;
+}
+
+.MbMetamaskLogined {
+    height: 32px;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 6px #00000040;
+    color: #aaa;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    background-color: #22292A;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.MbMetamaskNotLogined {
+    height: 32px;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0 0 6px #00000040;
+    color: #aaa;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    background-color: #22292A;
+    justify-content: center;
+    align-items: center;
+}

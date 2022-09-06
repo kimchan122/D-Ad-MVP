@@ -4,8 +4,13 @@
 @import './styles/Contents-wrapper.scss';
 @import './styles/SideNavigationBar.scss';
 @import './styles/TopNavigationBar.scss';
+@import './styles/DashboardFormStyle.scss';
 @import './styles/MakeAdsFormStyle.scss';
-@import './styles/EditInfoFromStyle.scss';
+@import './styles/EditInfoFormStyle.scss';
+
+@import './styles/MobileTopNavigationBarStyle.scss';
+@import './styles/MobileBottomNavigationBarStyle.scss';
+@import './styles/MobileEditInfoFormStyle.scss';
 
 html {
   background-color: #191D1F;
