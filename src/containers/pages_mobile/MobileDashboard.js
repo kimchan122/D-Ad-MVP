@@ -97,7 +97,7 @@ const MobileDashboard = () => {
     }
 
     useEffect(() => {
-        if (loading) {
+        if ((loading && results==null) || realresults) {
             AdvertisementComponents();
         }
     }, [results]);

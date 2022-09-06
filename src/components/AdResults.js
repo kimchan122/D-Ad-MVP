@@ -11,7 +11,7 @@ const AdResults = (props) => {
         setLgShow(true);
         setMddata(data);
     }
-    
+
     return (
         <>
             {props.data.rows.map((d, i) => {
@@ -19,7 +19,7 @@ const AdResults = (props) => {
                 return (
                     <Col key={i}>
                         <Card onClick={() => setModaldata(d)} style={{ backgroundColor: "#22292A" }} className="mb-3">
-                            <video style={{ width: "100%", height: "200px" }}>
+                            <video style={{ width: "100%", height: "200px" }} crossorigin="anonymous">
                                 <source
                                     style={{ height: "300px" }}
                                     src={`${d.metadata.keyvalues.video}`}

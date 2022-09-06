@@ -19,7 +19,7 @@ const AdTargetedResults = (props) => {
                 return (
                     <Col key={i}>
                         <Card onClick={() => setModaldata(d)} style={{ backgroundColor: "#22292A" }} className="mb-3">
-                            <video style={{ width: "100%", height: "200px" }}>
+                            <video style={{ width: "100%", height: "200px" }} crossorigin="anonymous">
                                 <source
                                     style={{ height: "300px" }}
                                     src={`${d.metadata.keyvalues.video}`}
