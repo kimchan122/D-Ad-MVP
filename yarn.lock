@@ -5513,7 +5513,7 @@ circom_runtime@0.1.19:
 
 "circom_runtime@git+https://github.com/kimchan122/circom_runtime.git":
   version "0.1.20"
-  resolved "git+https://github.com/kimchan122/circom_runtime.git#d4f3d561b2eeda3316370eee931ad54d10f37a4d"
+  resolved "git+https://github.com/kimchan122/circom_runtime.git#1abf726f8e3f92095872996a663a06dd6d71aae3"
   dependencies:
     ffjavascript "0.2.56"
 
