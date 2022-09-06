@@ -51,12 +51,12 @@ const AdModal = ({ data, normaltype }) => {
           {data.metadata.keyvalues.title}
         </Modal.Title>
       </Modal.Header>
-      <video style={{ width: "100%" }} autoPlay onEnded={(e) => VideoEnd(e)} crossOrigin="anonymous">
+      <video style={{ width: "100%" }} autoPlay onEnded={(e) => VideoEnd(e)}>
         <source
           src={`${data.metadata.keyvalues.video}`}
           type="video/mp4"
         />
-        <track default kind="captions" srcLang="en" src="/media/examples/friday.vtt" />
+        {/* <track default kind="captions" srcLang="en" src="/media/examples/friday.vtt" /> */}
       </video>
       <Modal.Body style={{ backgroundColor: "#2B3437", color: "#ffffff" }}>
         <Modal.Title>
