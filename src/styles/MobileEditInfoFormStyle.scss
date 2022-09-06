@@ -1,0 +1,24 @@
+@media (pointer:none), (pointer:coarse) {
+    .btn.btn-secondary {
+        width: 100%;
+    }
+}
+
+.Mb-btn-check {
+    width: 500px;
+}
+
+.EI-page-button {
+    position: fixed;
+    width: 100%;
+    bottom: 70px;
+}
+
+.Mb-edit-nextprev-btn {
+    background-color: #323A3B;
+    color: whitesmoke;
+    padding: 3px 10px 3px 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+}

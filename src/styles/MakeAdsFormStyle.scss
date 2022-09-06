@@ -27,3 +27,8 @@
 .range-slider {
     width: 100%;
 }
+
+.range-slider__tooltip__label {
+    visibility: hidden;
+    height: 0;
+}
