@@ -2341,9 +2341,9 @@
     picomatch "^2.2.2"
 
 "@sinclair/typebox@^0.24.1":
-  version "0.24.35"
-  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.35.tgz#7b5ca127aefe3ed482bb60f874bebbe3143e82f5"
-  integrity sha512-iN6ehuDndiTiDz2F+Orv/+oHJR+PrGv+38oghCddpsW4YEZl5qyLsWxSwYUWrKEOfjpGtXDFW6scJtjpzSLeSw==
+  version "0.24.37"
+  resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.24.37.tgz#3ea4cf8f3cf8a943c17baf5bb7b33587afa5f76b"
+  integrity sha512-8xuD57tNMHs7R0YUzFp0xqIVOTJDbFHnEN/JTej5d5o/dTx4OSsURKTT9dkWl6ghMk4zs3AYe1bi7UK0NnJ4oA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -5506,7 +5506,7 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
 
 "circom_runtime@git+https://github.com/kimchan122/circom_runtime.git":
   version "0.1.20"
-  resolved "git+https://github.com/kimchan122/circom_runtime.git#e0ac7bdf80c474c4dde25d2e81f0eed26caaaba4"
+  resolved "git+https://github.com/kimchan122/circom_runtime.git#303438fe4293a179726b9c77553decd26d017cab"
   dependencies:
     ffjavascript "0.2.56"
 
