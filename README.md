@@ -2,7 +2,7 @@
 
 D-Ad is use zkp to targeted advertisement the user's personal data without worrying about leakage, and reward the user.
 
-<img width="786" alt="D-Ad1" src="https://user-images.githubusercontent.com/106857741/188826479-9597fd8b-7fd4-44f3-bd1f-c424559b82ae.png">
+<img width="100%" alt="D-Ad1" src="https://user-images.githubusercontent.com/106857741/188826479-9597fd8b-7fd4-44f3-bd1f-c424559b82ae.png">
 <img width="786" alt="2022-09-07_1 38 18" src="https://user-images.githubusercontent.com/106857741/188826528-c46ab3e3-aca4-423c-ae97-675317016cd2.png">
 
 # Getting Started with Create React App
