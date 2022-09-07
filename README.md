@@ -7,9 +7,17 @@ D-Ad is use zkp to targeted advertisement the user's personal data without worry
 
 ## Getting Started
 
+In the project directory where the `package.json` file is located, you can run:
+
 ### `yarn` or `yarn install`
 
+After installation is complete, you can run:
+
 ### `yarn start`
+
+Then you can see the project running.
+
+---
 
 # Getting Started with Create React App
 
